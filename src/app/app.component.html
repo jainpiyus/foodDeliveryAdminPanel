@@ -1,0 +1,23 @@
+<mat-sidenav-container class="example-container" autosize>
+   <mat-sidenav mode="side" [(opened)]="sideNav">
+    <app-side-nav></app-side-nav>
+  </mat-sidenav> 
+  <mat-sidenav mode="over" [(opened)]="endSideNav" position="end" (closed)="endSideNavCloseEvent()">
+      <app-change-theme *ngIf="themeNavEnable"> </app-change-theme>
+  </mat-sidenav>
+
+  <app-header></app-header>
+
+ <router-outlet></router-outlet>
+  
+  <!-- <app-footer></app-footer> -->
+  <div style="position: fixed;
+  bottom:2rem;
+  right: 2rem;
+  z-index: 9999;">
+      <button style="box-shadow:0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 1px 18px 0px rgba(0, 0, 0, 0.12) !important;" matTooltip="Change Theme" mat-mini-fab (click)="changeTheme()">
+          <img width="20" height="20" alt=""
+          src="https://icon-library.net/images/theme-icon-png/theme-icon-png-6.jpg">
+      </button>
+  </div>
+</mat-sidenav-container>

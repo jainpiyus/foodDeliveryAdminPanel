@@ -1,0 +1,42 @@
+.header-container{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    transition: transform .3s ease;
+    contain: size layout style;
+  
+}
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .header-spacer {
+    flex: 1 1 auto;
+  }
+.header-menu-box{
+    overflow: hidden;   
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-width: 35px;
+    .header-menu-text{
+        font-weight: 500;
+    }
+}
+
+
+
+.popover {
+    z-index: 1;
+    // border-width: 1px;
+    // border-style: solid;
+    // border-color: rgb(246, 246, 246);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+    border-radius: 5px;
+    width: 320px;
+    min-height: 100px;
+}
+
+

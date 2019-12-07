@@ -1,0 +1,11 @@
+<div class="menu-setup-container">
+    <div class="full-hight card-background padding" style="min-height: 400px;">
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link *ngFor="let link of links" (click)="activeLink = link" [active]="activeLink == link"
+                [routerLink]="link.link">
+                {{link.label}}
+            </a>
+        </nav>
+        <router-outlet></router-outlet>
+    </div>
+</div>

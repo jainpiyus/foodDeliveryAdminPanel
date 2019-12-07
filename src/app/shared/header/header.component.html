@@ -1,0 +1,132 @@
+<mat-toolbar color="primary" class="header-container" style="z-index: 9999;">
+    <img src="https://assets-global.website-files.com/5bc37fe6ccad947f806d57a5/5bdcf5e60150d416848f6efb_Untitled%20design%20(1).png"
+        width="170" height="100%" />
+    <span class="header-spacer"></span>
+    <a mat-button class="full-height" aria-label="dashboard" [routerLink]="['/dashboard']">
+        <div class="header-menu-box">
+            <mat-icon fontSet="material-icons-outlined" matTooltip="Dashboard" class="icon">dashboard</mat-icon>
+        </div>
+    </a>
+    <a mat-button class="full-height" [mdePopoverTriggerFor]="notificationPopover" [mdePopoverOffsetX]="0"
+        [mdePopoverOffsetY]="64" mdePopoverTriggerOn="click">
+        <div class="header-menu-box">
+            <mat-icon matBadge="5" matBadgeColor="accent" matTooltip="Notification" fontSet="material-icons-outlined"
+                class="icon">
+                notifications_none</mat-icon>
+        </div>
+    </a>
+    <a mat-button class="full-height" [matMenuTriggerFor]="profile">
+        <div class="header-menu-box">
+            <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png" width="35px">
+            <div class="very-small-gap"></div>
+            <span class="header-menu-text">Admin</span>
+            <div class="very-small-gap"></div>
+            <mat-icon fontSet="material-icons-outlined" class="icon">keyboard_arrow_down</mat-icon>
+        </div>
+    </a>
+    <mat-menu #profile="matMenu">
+        <button mat-menu-item>
+            <mat-icon fontSet="material-icons-outlined">settings</mat-icon>
+            Account Settings
+        </button>
+        <button mat-menu-item>
+            <mat-icon fontSet="material-icons-outlined">vpn_key</mat-icon>
+            Change Password
+        </button>
+        <button mat-menu-item>
+            <mat-icon fontSet="material-icons-outlined">power_settings_new</mat-icon>
+            Logout
+        </button>
+    </mat-menu>
+
+</mat-toolbar>
+
+<mde-popover #notificationPopover="mdePopover" [mdePopoverCloseOnClick]="true" class="background foreground">
+    <div class="popover padding-vertically">
+        <div class="flex-middle full-width bottom-border">
+            <h4>Notifications</h4>
+        </div>
+        <!-- <div style="height: 60px;" class="flex-middle">
+            <span style="opacity: 0.5;">No Notification found</span>
+        </div> -->
+        <div style="max-height: 250px;" class="div-scroll">
+            <div class="flex-item-center unread-background padding">
+                <button mat-mini-fab aria-label="Example icon-button with a heart icon" color="primary">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </button>
+                <div class="very-small-gap"></div>
+                <div class="flex-column">
+                    <h4><b>Order from Shehnaz</b></h4>
+                    <div class="flex">
+                        <!-- <mat-icon fontSet="material-icons-outlined" style="font-size: 14px;">clock</mat-icon>
+                    <div class="very-small-gap"></div> -->
+                        <label style="font-weight: 600;">12 min ago</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-center unread-background padding">
+                <button mat-mini-fab aria-label="Example icon-button with a heart icon" color="primary">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </button>
+                <div class="very-small-gap"></div>
+                <div class="flex-column">
+                    <h4><b>Order from Rahul</b></h4>
+                    <div class="flex">
+                        <!-- <mat-icon fontSet="material-icons-outlined" style="font-size: 14px;">clock</mat-icon>
+                        <div class="very-small-gap"></div> -->
+                        <label style="font-weight: 600;">Yesterday at 6:00 pm</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-center padding">
+                <button mat-mini-fab aria-label="Example icon-button with a heart icon" color="primary">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </button>
+                <div class="very-small-gap"></div>
+                <div class="flex-column">
+                    <span>Order from Devendra</span>
+                    <div class="flex">
+                        <!-- <mat-icon fontSet="material-icons-outlined" style="font-size: 14px;">clock</mat-icon>
+                        <div class="very-small-gap"></div> -->
+                        <label>12 min ago</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-center padding">
+                <button mat-mini-fab aria-label="Example icon-button with a heart icon" color="primary">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </button>
+                <div class="very-small-gap"></div>
+                <div class="flex-column">
+                    <span>Order from Piyush</span>
+                    <div class="flex">
+                        <!-- <mat-icon fontSet="material-icons-outlined" style="font-size: 14px;">clock</mat-icon>
+                            <div class="very-small-gap"></div> -->
+                        <label>12 min ago</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item-center unread-background padding">
+                <button mat-mini-fab aria-label="Example icon-button with a heart icon" color="primary">
+                    <mat-icon>add_shopping_cart</mat-icon>
+                </button>
+                <div class="very-small-gap"></div>
+                <div class="flex-column">
+                    <h4><b>Order from Sonu</b></h4>
+                    <div class="flex">
+                        <!-- <mat-icon fontSet="material-icons-outlined" style="font-size: 14px;">clock</mat-icon>
+                            <div class="very-small-gap"></div> -->
+                        <label style="font-weight: 600;">Yesterday at 6:00 pm</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="small-vertical-height"></div>
+        <div class="flex-middle full-width top-border">
+            <span>View all notifications</span>
+        </div>
+    </div>
+</mde-popover>

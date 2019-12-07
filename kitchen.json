@@ -1,0 +1,1383 @@
+{
+  "customers": [
+    {
+      "firstName": "Devendra",
+      "lastName": "jai",
+      "mobileNumber": "9090120340",
+      "mailId": "devendra.jain@gamil.com",
+      "createdDate": "Sat, 23 Nov 2019 15:53:41 GMT",
+      "addresses": [
+        {
+          "id": 1,
+          "icon": "home",
+          "title": "Home",
+          "address": "Life Republic, Tathawade, Pimpri-Chinchwad, Maharashtra 411033",
+          "default": true
+        },
+        {
+          "id": 2,
+          "icon": "room",
+          "title": "Other",
+          "address": "Life Republic, Tathawade, Pimpri-Chinchwad, Maharashtra 411033",
+          "default": false
+        }
+      ],
+      "active": true,
+      "id": 1
+    },
+    {
+      "firstName": "Vanshik",
+      "lastName": "Jain",
+      "mobileNumber": "9030891234",
+      "mailId": "vanshika.jain@gmail.com",
+      "createdDate": "Sat, 23 Nov 2019 15:54:26 GMT",
+      "addresses": [],
+      "active": true,
+      "id": 2
+    },
+    {
+      "firstName": "Shefali",
+      "lastName": "Poonawala",
+      "mobileNumber": "78783456710",
+      "mailId": "shefali.wala@ymail.com",
+      "createdDate": "Sat, 23 Nov 2019 15:55:06 GMT",
+      "addresses": [],
+      "active": false,
+      "id": 3
+    },
+    {
+      "firstName": "Rashmi",
+      "lastName": "Shukla",
+      "mobileNumber": "8939907712",
+      "mailId": "rashmi.shukla@ymail.com",
+      "createdDate": "Sat, 23 Nov 2019 15:55:45 GMT",
+      "addresses": [],
+      "active": false,
+      "id": 4
+    },
+    {
+      "firstName": "Sehanaz",
+      "lastName": "Riyaz",
+      "mobileNumber": "8989786778",
+      "mailId": "sehnaz.riz@yahoo.in",
+      "createdDate": "Sat, 23 Nov 2019 15:56:20 GMT",
+      "addresses": [],
+      "active": true,
+      "id": 5
+    },
+    {
+      "firstName": "Paras",
+      "lastName": "Bawara",
+      "mobileNumber": "7907896780",
+      "mailId": "paras.bawara@cmail.com",
+      "createdDate": "Sat, 23 Nov 2019 16:14:50 GMT",
+      "addresses": [],
+      "active": true,
+      "id": 6
+    },
+    {
+      "firstName": "Siddharth",
+      "lastName": "Shukla",
+      "mobileNumber": "7898906789",
+      "mailId": "siddharth.sharma@dmail.com",
+      "createdDate": "Sat, 23 Nov 2019 16:15:34 GMT",
+      "addresses": [],
+      "active": true,
+      "id": 7
+    },
+    {
+      "firstName": "Rashmi",
+      "lastName": "Shukla Ji",
+      "mobileNumber": "8939907712",
+      "mailId": "rashmi.shukla@ymail.com",
+      "createdDate": "Sat, 23 Nov 2019 15:55:45 GMT",
+      "addresses": [],
+      "active": false,
+      "id": 8
+    },
+    {
+      "firstName": "Mahira",
+      "lastName": "Gill",
+      "mobileNumber": "7898903455",
+      "mailId": "mahira.gil@gmail.com",
+      "createdDate": "Sat, 23 Nov 2019 16:37:31 GMT",
+      "addresses": [],
+      "active": true,
+      "id": 9
+    }
+  ],
+  "meals": [
+    {
+      "id": 1,
+      "mealList": [
+        {
+          "id": 1,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx13wydDLHKFLKu8CllRCRzSMoWVxxzRtfoFUc8UYEjR5zz9q2",
+          "name": "Veg Seekh Kebab",
+          "type": "veg",
+          "price": 150,
+          "containt": "Dal makhani + jeera rice + 3 phulkas/2 tandoori rotis",
+          "rating": 4
+        },
+        {
+          "id": 2,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQPFkXENfFNE35-7jVQ9HkOoUtr309f16fk0DxY1XEwyG--D5EE",
+          "name": "Paneer Tikka",
+          "type": "veg",
+          "price": 250,
+          "containt": "Full",
+          "rating": 4
+        },
+        {
+          "id": 3,
+          "image": "https://igoogledisrael.com/wp-content/uploads/2009/06/Shakshuka_bs-e1523111217768.jpg",
+          "name": "Angara Paneer Tikka",
+          "type": "veg",
+          "price": 150,
+          "containt": "Dal makhani",
+          "rating": 4
+        },
+        {
+          "id": 4,
+          "image": "https://assets3.thrillist.com/v1/image/2842782/size/gn-gift_guide_variable_c.jpg",
+          "name": "Mashroom Tikka",
+          "type": "veg",
+          "price": 299,
+          "containt": "Full",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "mealList": [
+        {
+          "id": 5,
+          "name": "Tandoori Chicken",
+          "image": "https://stmed.net/sites/default/files/national-hot-dog-day-wallpapers-28347-7687244.jpg",
+          "type": "nonveg",
+          "price": 150,
+          "containt": "Full"
+        },
+        {
+          "id": 6,
+          "name": "Spicy Chicken Tondoori Leg",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTunSpWBhC8nWYnadv6p9eOPv0ge6yqWBFFIlpn_cVLlqjX_ai0",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Full"
+        },
+        {
+          "id": 7,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9OzEjvisLwUJRPIwkLu1nu5l_Qa1cA2Bn1T0nzGiqDHVoDtqb",
+          "name": "Tangdi Kabeb",
+          "type": "nonveg",
+          "price": 150
+        },
+        {
+          "id": 8,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGXhmXY5ZLUAigTA7x0dXISh6rdZs3ygFLydrV1QdtyqitDgr2",
+          "name": "Kamli Kebab",
+          "type": "nonveg",
+          "price": 299
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "mealList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala"
+        },
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala"
+        },
+        {
+          "id": 11,
+          "name": "Aroma Special Paneer Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHZp3bU7KOAy9Q4sl0Cv01MukBqtFGPdgxhhaViDpA2bhoit77",
+          "type": "veg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala"
+        },
+        {
+          "id": 12,
+          "name": "Aroma Special Checkin Biryani with Bone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7WkkTi3Py7811MX5zE1_ug6LP7Xemn-kZLFwF9nDCVPYAzDS",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala"
+        },
+        {
+          "id": 13,
+          "name": "Aroma Special Checkin Biryani (Boneless)",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQj2CKUz_OF2cFUAJRHae6PHg72tJrgOwf_fQbAaGDqtjVbFRke",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala"
+        },
+        {
+          "id": 14,
+          "name": "Aroma Special Fried Checkin Biryani",
+          "image": "https://i2.wp.com/www.shanazrafiq.com/wp-content/uploads/2016/05/DSC_0075-001.jpg?fit=4512%2C3000&ssl=1",
+          "type": "nonveg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": 101,
+      "totalAmount": 500,
+      "deliveryType": "Delivery",
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "status": "Accepted",
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "itemList": [
+        {
+          "id": 1,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx13wydDLHKFLKu8CllRCRzSMoWVxxzRtfoFUc8UYEjR5zz9q2",
+          "name": "Veg Seekh Kebab",
+          "type": "veg",
+          "price": 150,
+          "containt": "Dal makhani + jeera rice + 3 phulkas/2 tandoori rotis",
+          "rating": 4,
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQPFkXENfFNE35-7jVQ9HkOoUtr309f16fk0DxY1XEwyG--D5EE",
+          "name": "Paneer Tikka",
+          "type": "veg",
+          "price": 250,
+          "containt": "Full",
+          "rating": 4,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "totalAmount": 100,
+      "deliveryType": "Pick up",
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "status": "Accepted",
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "name": "Aroma Special Paneer Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHZp3bU7KOAy9Q4sl0Cv01MukBqtFGPdgxhhaViDpA2bhoit77",
+          "type": "veg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "totalAmount": 1500,
+      "deliveryType": "Pick up",
+      "firstName": "Piyush",
+      "lastName": "Jain",
+      "status": "Accepted",
+      "mobileNumber": "9039907701",
+      "mailId": "pjyahoomail@gmail.com",
+      "address": "Hinjewadi Pune",
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "name": "Aroma Special Paneer Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHZp3bU7KOAy9Q4sl0Cv01MukBqtFGPdgxhhaViDpA2bhoit77",
+          "type": "veg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "firstName": "Piyush",
+      "totalAmount": 200,
+      "lastName": "jain",
+      "mobileNumber": "9039907701",
+      "status": "Pending",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 12,
+          "name": "Aroma Special Checkin Biryani with Bone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7WkkTi3Py7811MX5zE1_ug6LP7Xemn-kZLFwF9nDCVPYAzDS",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "id": 104,
+      "deliveryType": "Pick up"
+    },
+    {
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "totalAmount": 800,
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 4
+        },
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 12,
+          "name": "Aroma Special Checkin Biryani with Bone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7WkkTi3Py7811MX5zE1_ug6LP7Xemn-kZLFwF9nDCVPYAzDS",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "id": 105,
+      "deliveryType": "Pick up"
+    },
+    {
+      "firstName": "Salman Abc",
+      "lastName": "Khan",
+      "totalAmount": 1500,
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 5,
+          "name": "Tandoori Chicken",
+          "image": "https://stmed.net/sites/default/files/national-hot-dog-day-wallpapers-28347-7687244.jpg",
+          "type": "nonveg",
+          "price": 150,
+          "containt": "Full",
+          "quantity": 4
+        }
+      ],
+      "status": "Pending",
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "id": 106,
+      "deliveryType": "Delivery"
+    },
+    {
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "totalAmount": 2500,
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Pending",
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "id": 107,
+      "deliveryType": "Delivery"
+    },
+    {
+      "firstName": "Akash",
+      "lastName": "jain",
+      "totalAmount": 2500,
+      "mobileNumber": "7769984322",
+      "mailId": "abc@gmail.com",
+      "address": null,
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Pending",
+      "orderDate": "Wed, 20 Nov 2019 13:38:17 GMT",
+      "id": 108,
+      "deliveryType": "Pick up"
+    },
+    {
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "totalAmount": 3500,
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Wed, 20 Nov 2019 13:46:44 GMT",
+      "id": 109,
+      "deliveryType": "Pick up"
+    },
+    {
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "totalAmount": 1200,
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Wed, 20 Nov 2019 15:28:18 GMT",
+      "id": 110,
+      "deliveryType": "Pick up"
+    },
+    {
+      "firstName": "Akash",
+      "lastName": "jain",
+      "totalAmount": 900,
+      "mobileNumber": "7769984322",
+      "mailId": "abc@gmail.com",
+      "address": "sadfasdfasdf sadfas d",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Thu, 21 Nov 2019 13:58:52 GMT",
+      "id": 111,
+      "deliveryType": "Pick up"
+    },
+    {
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "totalAmount": 300,
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Thu, 21 Nov 2019 13:59:15 GMT",
+      "id": 112,
+      "deliveryType": "Delivery"
+    },
+    {
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "totalAmount": 5100,
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Thu, 21 Nov 2019 13:59:34 GMT",
+      "id": 113,
+      "deliveryType": "Delivery"
+    },
+    {
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "totalAmount": 1200,
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Sat, 23 Nov 2019 02:28:14 GMT",
+      "id": 114,
+      "deliveryType": "Delivery"
+    },
+    {
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Sat, 23 Nov 2019 07:09:40 GMT",
+      "totalAmount": 500,
+      "deliveryType": "Pick up",
+      "id": 115
+    },
+    {
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Sat, 23 Nov 2019 08:25:43 GMT",
+      "totalAmount": 3333,
+      "deliveryType": "Pick up",
+      "id": 116
+    },
+    {
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 5,
+          "name": "Tandoori Chicken",
+          "image": "https://stmed.net/sites/default/files/national-hot-dog-day-wallpapers-28347-7687244.jpg",
+          "type": "nonveg",
+          "price": 150,
+          "containt": "Full",
+          "quantity": 6
+        }
+      ],
+      "status": "Pending",
+      "orderDate": "Sat, 23 Nov 2019 08:29:12 GMT",
+      "totalAmount": 227,
+      "deliveryType": "Delivery",
+      "id": 117
+    },
+    {
+      "firstName": "Akash",
+      "lastName": "jain",
+      "mobileNumber": "7769984322",
+      "mailId": "abc@gmail.com",
+      "address": "asdfasdfasdf",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "Aroma Special Mashroom Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVL1pMuq8Xzgh7KDWBVoWV-g4kXVHr3QFvP5ejmaluVyLpdSMj",
+          "type": "veg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Sat, 23 Nov 2019 08:29:57 GMT",
+      "totalAmount": 472,
+      "deliveryType": "Pick up",
+      "id": 118
+    },
+    {
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "name": "Aroma Special Paneer Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHZp3bU7KOAy9Q4sl0Cv01MukBqtFGPdgxhhaViDpA2bhoit77",
+          "type": "veg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Sat, 23 Nov 2019 09:20:19 GMT",
+      "totalAmount": 569.2,
+      "deliveryType": "Delivery",
+      "id": 119
+    },
+    {
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 12,
+          "name": "Aroma Special Checkin Biryani with Bone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7WkkTi3Py7811MX5zE1_ug6LP7Xemn-kZLFwF9nDCVPYAzDS",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Sat, 23 Nov 2019 09:25:42 GMT",
+      "totalAmount": 472,
+      "deliveryType": "Pick up",
+      "id": 120
+    },
+    {
+      "firstName": "Salman",
+      "lastName": "Khan",
+      "mobileNumber": "888808801",
+      "mailId": "salman@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 12,
+          "name": "Aroma Special Checkin Biryani with Bone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7WkkTi3Py7811MX5zE1_ug6LP7Xemn-kZLFwF9nDCVPYAzDS",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Sat, 23 Nov 2019 09:33:53 GMT",
+      "totalAmount": 522,
+      "deliveryType": "Delivery",
+      "id": 121
+    },
+    {
+      "firstName": "Piyush",
+      "lastName": "jain",
+      "mobileNumber": "9039907701",
+      "mailId": "abc@gmail.com",
+      "address": "Marunji Rd, Marunji Village, Hinjawadi",
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "name": "Aroma Special Paneer Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHZp3bU7KOAy9Q4sl0Cv01MukBqtFGPdgxhhaViDpA2bhoit77",
+          "type": "veg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 12,
+          "name": "Aroma Special Checkin Biryani with Bone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7WkkTi3Py7811MX5zE1_ug6LP7Xemn-kZLFwF9nDCVPYAzDS",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Sat, 23 Nov 2019 12:22:22 GMT",
+      "totalAmount": 814.2,
+      "deliveryType": "Pick up",
+      "id": 122
+    },
+    {
+      "firstName": "Akash",
+      "lastName": "jain",
+      "mobileNumber": "7769984322",
+      "mailId": "abc@gmail.com",
+      "address": "kljsdklfkasdjfkl klsjkls",
+      "itemList": [
+        {
+          "id": 13,
+          "name": "Aroma Special Checkin Biryani (Boneless)",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQj2CKUz_OF2cFUAJRHae6PHg72tJrgOwf_fQbAaGDqtjVbFRke",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "name": "Aroma Special Paneer Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHZp3bU7KOAy9Q4sl0Cv01MukBqtFGPdgxhhaViDpA2bhoit77",
+          "type": "veg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Sat, 23 Nov 2019 12:27:19 GMT",
+      "totalAmount": 687.2,
+      "deliveryType": "Delivery",
+      "id": 123
+    },
+    {
+      "firstName": "Mahira",
+      "lastName": "Gill",
+      "mobileNumber": "7898903455",
+      "mailId": "mahira.gil@gmail.com",
+      "address": "MS Road",
+      "itemList": [
+        {
+          "id": 1,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx13wydDLHKFLKu8CllRCRzSMoWVxxzRtfoFUc8UYEjR5zz9q2",
+          "name": "Veg Seekh Kebab",
+          "type": "veg",
+          "price": 150,
+          "containt": "Dal makhani + jeera rice + 3 phulkas/2 tandoori rotis",
+          "rating": 4,
+          "quantity": 1
+        },
+        {
+          "id": 11,
+          "name": "Aroma Special Paneer Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHZp3bU7KOAy9Q4sl0Cv01MukBqtFGPdgxhhaViDpA2bhoit77",
+          "type": "veg",
+          "price": 290,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Sat, 23 Nov 2019 16:38:22 GMT",
+      "totalAmount": 569.2,
+      "deliveryType": "Delivery",
+      "id": 124
+    },
+    {
+      "firstName": "Rashmi",
+      "lastName": "Shukla",
+      "mobileNumber": "8939907712",
+      "mailId": "rashmi.shukla@ymail.com",
+      "address": null,
+      "itemList": [
+        {
+          "id": 9,
+          "name": "Aroma Special Veg Biryani",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXImnY5VacA-R0o9R4Y33WFu1tLhts60-sTG0u16ltv_W69QCe",
+          "type": "veg",
+          "price": 150,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        },
+        {
+          "id": 12,
+          "name": "Aroma Special Checkin Biryani with Bone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRI7WkkTi3Py7811MX5zE1_ug6LP7Xemn-kZLFwF9nDCVPYAzDS",
+          "type": "nonveg",
+          "price": 250,
+          "containt": "Served With Raita and mirchi ka masala",
+          "quantity": 1
+        }
+      ],
+      "status": "On The Way",
+      "orderDate": "Sun, 24 Nov 2019 08:25:05 GMT",
+      "totalAmount": 522,
+      "deliveryType": "Delivery",
+      "id": 125,
+      "deliveryBoyId": 1
+    },
+    {
+      "firstName": "Sehanaz",
+      "lastName": "Riyaz",
+      "mobileNumber": "8989786778",
+      "mailId": "sehnaz.riz@yahoo.in",
+      "address": "sdfsdfzxdf",
+      "itemList": [
+        {
+          "name": "Dal Makhani",
+          "sortDescription": "dal",
+          "description": "dal",
+          "price": 70,
+          "createdDate": "Sun, 24 Nov 2019 11:51:03 GMT",
+          "active": false,
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJCdouM7ijErJ068XoSV48f2pfYYQPdU-8k4x84lWhuX6Uv7ru",
+          "type": "veg",
+          "categoryId": 7,
+          "id": 4,
+          "quantity": 5
+        }
+      ],
+      "status": "On The Way",
+      "orderDate": "Sun, 24 Nov 2019 12:31:40 GMT",
+      "totalAmount": 297.8,
+      "deliveryType": "Delivery",
+      "id": 126,
+      "deliveryBoyId": 1
+    },
+    {
+      "firstName": "Sehanaz",
+      "lastName": "Riyaz",
+      "mobileNumber": "8989786778",
+      "mailId": "sehnaz.riz@yahoo.in",
+      "address": "lkjxlkasdjklfasjlfk",
+      "itemList": [
+        {
+          "name": "Chicken Tikka",
+          "sortDescription": "chieck ",
+          "description": "tikka",
+          "price": 70,
+          "createdDate": "Sun, 24 Nov 2019 11:54:35 GMT",
+          "active": true,
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRue_uJVDQrOhzGmwLduFIeCFzB8YVTvAfi-c-VF-aV99Aa3N66",
+          "type": "nonveg",
+          "categoryId": 2,
+          "id": 6,
+          "quantity": 3
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Mon, 25 Nov 2019 13:01:56 GMT",
+      "totalAmount": 297.8,
+      "deliveryType": "Delivery",
+      "id": 127,
+      "deliveryBoyId": 1
+    },
+    {
+      "firstName": "Siddharth",
+      "lastName": "Shukla",
+      "mobileNumber": "7898906789",
+      "mailId": "siddharth.sharma@dmail.com",
+      "address": null,
+      "itemList": [
+        {
+          "name": "Chicken Tikka",
+          "sortDescription": "chieck ",
+          "description": "tikka",
+          "price": 70,
+          "createdDate": "Sun, 24 Nov 2019 11:54:35 GMT",
+          "active": true,
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRue_uJVDQrOhzGmwLduFIeCFzB8YVTvAfi-c-VF-aV99Aa3N66",
+          "type": "nonveg",
+          "categoryId": 2,
+          "id": 6,
+          "quantity": 1
+        }
+      ],
+      "status": "Delivered",
+      "orderDate": "Wed, 27 Nov 2019 05:35:19 GMT",
+      "totalAmount": 132.6,
+      "deliveryType": "Delivery",
+      "id": 128,
+      "deliveryBoyId": 3
+    },
+    {
+      "firstName": "Sehanaz",
+      "lastName": "Riyaz",
+      "mobileNumber": "8989786778",
+      "mailId": "sehnaz.riz@yahoo.in",
+      "address": null,
+      "itemList": [
+        {
+          "name": "Hong Kong Noodles",
+          "sortDescription": "noodles",
+          "description": "noodles",
+          "price": 120,
+          "createdDate": "Sun, 24 Nov 2019 11:56:43 GMT",
+          "active": false,
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwsJqzjo81xlLQAEipxiDMfmqVJ43vYbYGOsrUDrY5_6tDoMna",
+          "type": "veg",
+          "categoryId": 3,
+          "id": 8,
+          "quantity": 1
+        }
+      ],
+      "status": "Rejected",
+      "orderDate": "Fri, 29 Nov 2019 08:21:25 GMT",
+      "totalAmount": 141.6,
+      "deliveryType": "Pick up",
+      "id": 129
+    },
+    {
+      "firstName": "Devendra",
+      "lastName": "Jain",
+      "mobileNumber": "9090120340",
+      "mailId": "devendra.jain@gamil.com",
+      "address": "Life Republic, Tathawade, Pimpri-Chinchwad, Maharashtra 411033",
+      "itemList": [
+        {
+          "name": "Chicken Tikka",
+          "sortDescription": "chieck ",
+          "description": "tikka",
+          "price": 70,
+          "createdDate": "Sun, 24 Nov 2019 11:54:35 GMT",
+          "active": true,
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRue_uJVDQrOhzGmwLduFIeCFzB8YVTvAfi-c-VF-aV99Aa3N66",
+          "type": "nonveg",
+          "categoryId": 2,
+          "id": 6,
+          "quantity": 2
+        }
+      ],
+      "status": "Accepted",
+      "orderDate": "Fri, 29 Nov 2019 09:26:47 GMT",
+      "totalAmount": 247.8,
+      "deliveryType": "Pick up",
+      "id": 130
+    },
+    {
+      "firstName": "Devendra",
+      "lastName": "jai",
+      "mobileNumber": "9090120340",
+      "mailId": "devendra.jain@gamil.com",
+      "address": "Life Republic, Tathawade, Pimpri-Chinchwad, Maharashtra 411033",
+      "itemList": [
+        {
+          "name": "Chole Bhature",
+          "sortDescription": "Chole Bhature with raiya",
+          "description": "Chole Bhature",
+          "price": 456,
+          "createdDate": "Sun, 24 Nov 2019 11:39:37 GMT",
+          "active": true,
+          "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_uytx5PuQv8QJSD071GUcfE3m4pP7XZuIWisDqJZXrQmtUTn",
+          "type": "veg",
+          "categoryId": 4,
+          "id": 1,
+          "quantity": 3
+        },
+        {
+          "name": "Aloo Paratha",
+          "sortDescription": "with curd and pickle",
+          "description": "with curd and pickle",
+          "price": 40,
+          "createdDate": "Sun, 24 Nov 2019 11:47:00 GMT",
+          "active": false,
+          "imageLink": "https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/6-march/Nutty_Aloo_Stuffed_Palak_Paratha_Recipe-1.jpg",
+          "type": "veg",
+          "categoryId": 4,
+          "id": 2,
+          "quantity": 1
+        }
+      ],
+      "status": "Pending",
+      "orderDate": "Fri, 29 Nov 2019 09:35:36 GMT",
+      "totalAmount": 1711.44,
+      "deliveryType": "Delivery",
+      "id": 131
+    }
+  ],
+  "categories": [
+    {
+      "name": "North Indian",
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQq3P8oU_yaNSVQjvS7SREOly_UbcwXnqeztQF7ys3uaikpA59V",
+      "parentCategoryId": -1,
+      "active": true,
+      "id": 1
+    },
+    {
+      "name": "South Indian",
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfT3F2cdFdI1qIndBSjbyV0cz1l5IF-nJv_WcaAPPqIFhuIID-",
+      "parentCategoryId": -1,
+      "active": null,
+      "id": 2
+    },
+    {
+      "name": "Chinese Food",
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTn-m9PiiAyoz0PBGRwOVaFw2MF-o6JYnwnk2zX2UdtUb_81U17",
+      "parentCategoryId": -1,
+      "active": null,
+      "id": 3
+    },
+    {
+      "name": "Main Course",
+      "imageLink": "https://www.mathrubhumi.com/polopoly_fs/1.1549102.1480658124!/image/image.jpg_gen/derivatives/landscape_928/image.jpg",
+      "parentCategoryId": 1,
+      "active": null,
+      "id": 4
+    },
+    {
+      "name": "Starter",
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSW9DbjF0rIMDAHRKBsYmMK7OudV7w9PmMrBAeYhomvETV3LLm2",
+      "parentCategoryId": -1,
+      "active": true,
+      "id": 5
+    },
+    {
+      "name": "Dal",
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTq8yxWWLY8WmVqaaVGbAQCSdEiX1Go2w1iJSx3QRV7uJlobvCn",
+      "parentCategoryId": 1,
+      "active": true,
+      "id": 7
+    }
+  ],
+  "products": [
+    {
+      "name": "Chole Bhature",
+      "sortDescription": "Chole Bhature with raiya",
+      "description": "Chole Bhature",
+      "price": 456,
+      "createdDate": "Sun, 24 Nov 2019 11:39:37 GMT",
+      "active": true,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_uytx5PuQv8QJSD071GUcfE3m4pP7XZuIWisDqJZXrQmtUTn",
+      "type": "veg",
+      "categoryId": 4,
+      "id": 1
+    },
+    {
+      "name": "Aloo Paratha",
+      "sortDescription": "with curd and pickle",
+      "description": "with curd and pickle",
+      "price": 40,
+      "createdDate": "Sun, 24 Nov 2019 11:47:00 GMT",
+      "active": false,
+      "imageLink": "https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/6-march/Nutty_Aloo_Stuffed_Palak_Paratha_Recipe-1.jpg",
+      "type": "veg",
+      "categoryId": 4,
+      "id": 2
+    },
+    {
+      "name": "Veg Pulao",
+      "sortDescription": "Veg Pulao",
+      "description": "pulao",
+      "price": 55,
+      "createdDate": "Sun, 24 Nov 2019 11:49:26 GMT",
+      "active": false,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQFX5OZlItWrDri_BuW6cQel8G8iqh7BcnY7U81kPSkrhbwmywO",
+      "type": "veg",
+      "categoryId": 4,
+      "id": 3
+    },
+    {
+      "name": "Dal Makhani",
+      "sortDescription": "dal",
+      "description": "dal",
+      "price": 70,
+      "createdDate": "Sun, 24 Nov 2019 11:51:03 GMT",
+      "active": false,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJCdouM7ijErJ068XoSV48f2pfYYQPdU-8k4x84lWhuX6Uv7ru",
+      "type": "veg",
+      "categoryId": 7,
+      "id": 4
+    },
+    {
+      "name": "Paneer Butter Masala",
+      "sortDescription": "paneer",
+      "description": "paneer",
+      "price": 110,
+      "createdDate": "Sun, 24 Nov 2019 11:53:10 GMT",
+      "active": true,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRyOwwLJFQ2sXpWI4Vd2BxK9VJoOGKqx4MexvpuetsJ3TQbKFeO",
+      "type": "veg",
+      "categoryId": 4,
+      "id": 5
+    },
+    {
+      "name": "Chicken Tikka",
+      "sortDescription": "chieck ",
+      "description": "tikka",
+      "price": 70,
+      "createdDate": "Sun, 24 Nov 2019 11:54:35 GMT",
+      "active": true,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRue_uJVDQrOhzGmwLduFIeCFzB8YVTvAfi-c-VF-aV99Aa3N66",
+      "type": "nonveg",
+      "categoryId": 2,
+      "id": 6
+    },
+    {
+      "name": "Chicken Biryani",
+      "sortDescription": "biryani",
+      "description": "birynai",
+      "price": 120,
+      "createdDate": "Sun, 24 Nov 2019 11:56:02 GMT",
+      "active": true,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyDU7UMIxxlsiA4fouMSGADHTFF2xYrQCHRKmX-b3TDgSV6Lou",
+      "type": "nonveg",
+      "categoryId": 2,
+      "id": 7
+    },
+    {
+      "name": "Hong Kong Noodles",
+      "sortDescription": "noodles",
+      "description": "noodles",
+      "price": 120,
+      "createdDate": "Sun, 24 Nov 2019 11:56:43 GMT",
+      "active": false,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwsJqzjo81xlLQAEipxiDMfmqVJ43vYbYGOsrUDrY5_6tDoMna",
+      "type": "veg",
+      "categoryId": 3,
+      "id": 8
+    },
+    {
+      "name": "Schezwan Fried Rice",
+      "sortDescription": "rice",
+      "description": "rice ",
+      "price": 130,
+      "createdDate": "Sun, 24 Nov 2019 11:59:07 GMT",
+      "active": true,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR97F8Ie4L7yD_kbn5VYWJRBG0SO77PQLktWNlLN9PZLggB2IYx",
+      "type": "veg",
+      "categoryId": 3,
+      "id": 9
+    },
+    {
+      "name": "Veg Crispy",
+      "sortDescription": "Hot veg Crispy with papad",
+      "description": "Hot veg Crispy with papad",
+      "price": 120,
+      "createdDate": "Mon, 25 Nov 2019 16:35:23 GMT",
+      "active": true,
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHPnwmInlsv88gLcX2lZuuO5uVv-fmy_Lni9nExxgBZvmeqZNJ",
+      "type": "veg",
+      "categoryId": 5,
+      "id": 10
+    }
+  ],
+  "delivery-boy": [
+    {
+      "name": "Piyush Jain",
+      "mobileNumber": "09039907701",
+      "mailId": "pjyahoomail@gmail.com",
+      "city": "JOURA",
+      "dob": null,
+      "address": "Sadar Bazar",
+      "gender": "male",
+      "indentityNumber": "BAMPJ8735Q",
+      "licenceNumber": "3445323827489283475",
+      "licenceExpiryDate": "2019-12-31",
+      "createdDate": "Wed, 27 Nov 2019 13:38:36 GMT",
+      "status": "Online",
+      "id": 1
+    },
+    {
+      "name": "Piyush",
+      "mobileNumber": "903990",
+      "mailId": "jain.a.piyush@gmail.com",
+      "city": "Bhopal",
+      "dob": "1992-02-01",
+      "address": "askldfjlaksdj",
+      "gender": "male",
+      "indentityNumber": "oklasdjfkla",
+      "licenceNumber": "09809893093",
+      "licenceExpiryDate": "2011-02-01",
+      "createdDate": "Wed, 27 Nov 2019 13:46:58 GMT",
+      "status": "Offline",
+      "id": 2
+    },
+    {
+      "name": "Devendra",
+      "mobileNumber": "8807701223",
+      "mailId": "dev@gmail.com",
+      "city": "pune",
+      "dob": "2019-01-31",
+      "address": "aklsdnfklasj klasjdfkl ajsdklf",
+      "gender": "male",
+      "indentityNumber": "3452353425234523452",
+      "licenceNumber": "345223452345",
+      "licenceExpiryDate": "2019-01-31",
+      "createdDate": "Thu, 28 Nov 2019 13:32:57 GMT",
+      "status": "Online",
+      "id": 3
+    }
+  ]
+}

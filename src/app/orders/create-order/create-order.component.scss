@@ -1,0 +1,95 @@
+.example-form {
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .address-box-container{
+    display: flex;
+    flex-wrap: wrap;
+  
+    
+      .address-box-card{
+         cursor: pointer;
+         position: relative;
+          margin-bottom: 10px;
+          margin-right: 10px;          
+          padding: 20px;
+          border: 1px solid lightgray;
+          transition: 0.3s;
+          .address-box-header{
+              display: flex;
+              align-items: center;
+          }
+          .address-box-footer{
+              font-size: 13px;
+              line-height: 1.3;
+              padding-top: 5px;
+              margin-left: 34px;
+          }
+      }
+  }
+  .address-box-card:hover{
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+
+    .main-box{
+        .cart-header{
+            display: flex;
+        }
+    
+        .items{
+            border-top: 1px solid #f2f2f2;
+            width: 100%;
+            margin-top: 10px;
+            padding-top: 20px;
+            .list{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                .item-name{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .subtotal{
+            padding-top: 30px;
+            border-top: 1px solid #f2f2f2;
+            font-size: 15px;
+        
+            .total-amount-box{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .extra-charges-text{
+                font-size: 13px;;
+                color: black;
+                margin-top: 2px;
+            }
+        }
+    }
+    .item-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item-box{
+        cursor: pointer;
+        min-width: 275px;
+        max-width: 277px;
+        min-height: 60px;
+        padding: 10px;       
+    }
+    .cart-overflow{
+        max-height: 270px;
+        // margin-top: 30px;;
+        overflow: hidden;
+     }
+     .cart-overflow:hover{
+         overflow: overlay;
+     }

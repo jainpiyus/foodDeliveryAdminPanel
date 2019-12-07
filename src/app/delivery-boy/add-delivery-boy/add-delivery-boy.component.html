@@ -1,0 +1,80 @@
+<div class="flex-item-center">
+    <a mat-icon-button color="primary" aria-label="go to list" [routerLink]="['/delivery-boy/list']">
+        <mat-icon fontSet="material-icons-outlined" class="icon">keyboard_backspace</mat-icon>
+    </a>
+</div>
+<div class="flex-middle full-width">
+
+    <mat-card style="min-width: 500px;">
+        <div class="flex-width">
+            <h2 style="text-align: center;">{{customerId ? 'Update Delivery Boy' : 'Add Delivery Boy'}}</h2>
+        </div>
+        <div class="vertical-height"></div>
+        <form class="example-form" [formGroup]="deliveryBoyForm" (ngSubmit)="onFormSubmit()">
+            <div class="flex-column">
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Delivery Boy Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Delivery Boy Name" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="tel" matInput formControlName="mobileNumber" placeholder="Mobile Number" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Email Id</mat-label>
+                    <input type="email" matInput formControlName="mailId" placeholder="Email Id" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput rows="4" formControlName="address" placeholder="Enter full address"
+                        required></textarea>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="city" placeholder="City" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Date of birth</mat-label>
+                    <input type="date" matInput formControlName="dob" placeholder="Date of birth" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-label>Gender</mat-label>
+                <div class="vertical-height"></div>
+                <mat-radio-group formControlName="gender" color="primary">
+                    <mat-radio-button value="male" style="margin-left: 10px;" checked="true">Male</mat-radio-button>
+                    <mat-radio-button value="female" style="margin-left: 10px;">Female</mat-radio-button>
+                </mat-radio-group>
+                <div class="vertical-height"></div>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Identity Number</mat-label>
+                    <input matInput formControlName="indentityNumber" placeholder="indentity Number" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Licence Number</mat-label>
+                    <input matInput formControlName="licenceNumber" placeholder="Licence Number" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Licence Expiry Date</mat-label>
+                    <input type="date" matInput formControlName="licenceExpiryDate" placeholder="Licence Expiry Date" required>
+                </mat-form-field>
+            </div>
+            <div class="flex-with-space-between">
+                <a [routerLink]="['/delivery-boy/list']" mat-stroked-button color="primary" aria-label="Place order">
+                    <mat-icon>keyboard_arrow_left</mat-icon>
+                    Back
+                </a>
+                <button mat-raised-button type="submit" color="primary" [disabled]="deliveryBoyForm.status === 'INVALID'"
+                    aria-label="Place order">
+                    <mat-icon>done</mat-icon> <span>{{customerId ? 'Update' : 'Save'}}</span>
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>

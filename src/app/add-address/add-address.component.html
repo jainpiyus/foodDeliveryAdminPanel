@@ -1,0 +1,68 @@
+<div class="address-container">
+    <div class="flex-with-space-between">
+        <h3>Add New Address</h3>
+        <a mat-icon-button color="primary" (click)="onNoClick()">
+            <mat-icon fontSet="material-icons-outlined" mat-icon-button class="icon">close</mat-icon>
+        </a>
+    </div>
+    <div class="flex">
+        <div class="flex1" style="margin-right: 40px;">
+            <div class="vertical-height"></div>
+            <div>
+                <!-- <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                        <input type="text" placeholder="Search Location or Places" aria-label="Seach Location or Places"
+                            matInput [formControl]="addressCtrl" [matAutocomplete]="auto3">
+                        <mat-autocomplete #auto3="matAutocomplete" [displayWith]="addressDisplayFn">
+                            <mat-option *ngFor="let option of filteredAddresses | async" [value]="option">
+                                <span>{{option.address}}</span>
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form> -->
+            </div>
+            <div class="vertical-height"></div>
+            <div>
+                <img src="http://scalar.usc.edu/works/working-title-critical-theory-book-ccu-2017/media/maps_routemap.png"
+                    width="100%">
+            </div>
+        </div>
+        <div class="flex1" style="margin-left: 40px;">
+            <div>
+                <h3>Address Info*</h3>
+            </div>
+            <div class="vertical-height"></div>
+
+            <form class="example-form" [formGroup]="addressForm" (ngSubmit) ="onAddressFormSubmit()" >
+                <mat-form-field appearance="outline" style="width: 100%" >
+                    <mat-label>Address</mat-label>
+                    <textarea matInput rows="4" formControlName="address" placeholder="Enter full address" required></textarea>
+                </mat-form-field>
+                <!-- <mat-form-field appearance="outline">
+                    <mat-label>Address Type</mat-label>
+                    <mat-select formControlName="title" required (selectionChange)="onTypeSelect($event.value)">
+                        <mat-option *ngFor="let type of typeList" [value]="type">
+                            {{type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field> -->
+                <!-- <section class="example-section">
+                    <mat-slide-toggle class="example-margin" formControlName="default" color="primary" >
+                        Make Default
+                    </mat-slide-toggle>
+                </section> -->
+                <div class="reverse-flex">
+                    <button mat-flat-button color="primary" aria-label="Place order" type="submit" [disabled] = "addressForm.status !== 'VALID'" [mat-dialog-close]="addressForm.value">
+                        Save
+                    </button>
+                    <div class="very-small-gap"></div>
+                    <button (click)="onNoClick()" mat-stroked-button color="primary" aria-label="Cancel">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

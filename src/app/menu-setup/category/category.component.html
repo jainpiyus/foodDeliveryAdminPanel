@@ -1,0 +1,62 @@
+<div class="vertical-height"></div>
+
+<h3 style="font-weight: bold;">Category Path:
+    <ng-container *ngFor="let category of categoryPath">
+        <a (click)="getCategory(category)" class="pointer">{{category.name}}</a> /
+    </ng-container>
+</h3>
+<div class="vertical-height"></div>
+<div class="vertical-height"></div>
+<div class="flex">
+    <div class="flex1">
+        <form class="category-form" [formGroup]="categoryForm" (ngSubmit) = "addCategory()">
+            <div class="flex-column">
+                <div class="flex-with-space-between">
+                    <h3>Add Category:</h3>
+                    <mat-icon matTooltip="Add Category like North indian, south indian, chinese, etc">help_outline
+                    </mat-icon>
+                </div>
+                <div class="vertical-height"></div>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Category Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Enter Category Name" required>
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Enter Image Link</mat-label>
+                    <input matInput formControlName="imageLink" placeholder="Enter Image Link" required>
+                </mat-form-field>
+                <button mat-button mat-raised-button color="primary" [disabled]="categoryForm.status === 'INVALID'" type="submit">ADD
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="flex2" style="margin-left: 40px;">
+        <h3>Available Categories:</h3>
+        <div *ngIf="categories && categories.length ===0" style="min-height: 200px; margin-top: 20px;"
+            class="flex-middle border">
+            <div class="flex-column">
+                <h3 style="opacity: 0.5;"> No category available on below path</h3>
+                <div class="vertical-height"></div>
+                <div>
+                    Path: <span *ngFor="let category of categoryPath">
+                        <a (click)="getCategory(category)" class="pointer">{{category.name}}</a> /
+                    </span>
+                </div>
+            </div>
+        </div>
+        <mat-action-list>
+            <mat-list-item *ngFor="let category of categories" (click)="getCategory(category)" style="height: 60px;">
+                <div mat-line class="primary flex-item-center" style="display: flex !important;">
+                    <img [src]="category.imageLink" width="50" height="50" style="border-radius: 50%; padding: 2px;"
+                        class="primary-border">
+                    <div class="very-small-gap"></div>
+                    {{category.name}}
+                </div>
+                <mat-slide-toggle color="primary" checked="true"></mat-slide-toggle>
+                <button mat-icon-button (click)="removeCategory(category)">
+                    <mat-icon matListIcon end>delete</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-action-list>
+    </div>
+</div>

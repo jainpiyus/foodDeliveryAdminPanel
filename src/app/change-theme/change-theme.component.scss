@@ -1,0 +1,29 @@
+.theme-container{
+    padding: 30px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    .theme-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .theme-body{
+        margin-top: 15px;
+        .theme-box{
+            padding: 20px;
+            border: 1px solid lightgray;
+            min-height: 300px;
+           
+        }
+    }
+}
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }

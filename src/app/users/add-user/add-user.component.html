@@ -1,0 +1,45 @@
+<div class="flex-item-center">
+    <a mat-icon-button color="primary" aria-label="go to list" [routerLink]="['/users/list']">
+        <mat-icon fontSet="material-icons-outlined" class="icon">keyboard_backspace</mat-icon>
+    </a>
+</div>
+<div class="flex-middle full-width">
+
+    <mat-card style="min-width: 300px;">
+        <div class="flex-width">
+            <h2 style="text-align: center;">{{customerId ? 'Update User' : 'Add User'}}</h2>
+        </div>
+        <div class="vertical-height"></div>
+        <form class="example-form" [formGroup]="userForm" (ngSubmit) = "onUserFormSubmit()">
+            <div class="flex-column">
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName" placeholder="First Name" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" placeholder="Last Name" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Mobile Number</mat-label>
+                    <input matInput formControlName="mobileNumber" placeholder="Mobile Number" required>
+                </mat-form-field>
+                <div class="small-gap"></div>
+                <mat-form-field appearance="outline" class="flex1">
+                    <mat-label>Email Id</mat-label>
+                    <input matInput formControlName="mailId" placeholder="Email Id" required>
+                </mat-form-field>
+            </div>
+            <div class="flex-with-space-between">
+                <a  [routerLink]="['/users/list']" mat-stroked-button color="primary" aria-label="Place order">
+                    <mat-icon>keyboard_arrow_left</mat-icon>
+                    Back
+                </a>
+                <button mat-raised-button type="submit" color="primary" [disabled]= "userForm.status === 'INVALID'" aria-label="Place order">
+                    <mat-icon>done</mat-icon> <span>{{customerId ? 'Update' : 'Save'}}</span>
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>

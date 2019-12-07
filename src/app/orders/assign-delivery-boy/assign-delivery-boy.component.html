@@ -1,0 +1,31 @@
+<div class="assign-delivery-boy-container">
+    <div class="model-header">
+        <h2>Assign Delivery Boy</h2>
+        <div class="full-height">
+            <button mat-mini-fab color="default" (click)="onNoClick()">
+                <mat-icon fontSet="material-icons-outlined" mat-icon-button class="icon">close</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="model-body">
+         <div class="border-radius padding" *ngFor="let deliveryBoy of deliveryBoyList" style="margin: 0px 20px 20px; color: black;" [style.background]="deliveryBoy.status === 'Online' ? '#e8f9eb' : '#ffbfbf'">
+            <div class="flex-with-space-between">
+                <h2>{{deliveryBoy.name}} ({{deliveryBoy.status}})</h2>
+                <button mat-raised-button color="accent" (click)="assignDeliveryBoy(deliveryBoy)">Assign</button>
+            </div>
+            <div class="vertical-height"></div>
+            <div class="flex">
+                <div class="flex1">Email:</div>
+                <div class="flex2"><b>{{deliveryBoy.mailId}}</b></div>
+            </div>
+            <div class="flex" style="margin-top: 10px;">
+                <div class="flex1">Mobile Number:</div> 
+                <div class="flex2"><b>{{deliveryBoy.mobileNumber}}</b></div>
+            </div>
+        </div> 
+    </div>
+    <div class="model-footer reverse-flex">
+        <button mat-stroked-button color="primary" (click)="onNoClick()">Cancel</button>
+    </div>
+
+</div>

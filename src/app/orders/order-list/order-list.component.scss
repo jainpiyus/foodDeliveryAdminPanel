@@ -1,0 +1,31 @@
+.box{
+    height: 40px;
+    min-width: 150px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    
+    .number{
+        font-size: 32px; 
+        font-weight: 500;
+    }
+    .text{
+        font-size: 12px; 
+        opacity: 0.8; 
+        text-align: center;
+    }
+}
+
+.circle-box{
+    width: 80px;
+    height: 80px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.table-row {
+    height: 65px !important;
+  }
+

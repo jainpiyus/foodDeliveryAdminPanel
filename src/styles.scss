@@ -1,0 +1,193 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import '~@angular/material/theming';
+@import '../src/assets/theme.scss';
+@import '~saturn-datepicker/theming';
+
+
+@include mat-core();
+$custom-success-color: rgb(156, 209, 139);
+
+$candy-primary: mat-palette($mat-indigo, 500);
+$candy-accent:  mat-palette($mat-gray, 800);
+$candy-warn: mat-palette($mat-red, 700);
+$candy-theme:   mat-light-theme($candy-primary, $candy-accent, $candy-warn);
+
+$red-primary: mat-palette($mat-red, 800);
+$red-accent: mat-palette($mat-gray, 800);
+$red-warn: mat-palette($mat-red, 700);
+
+$orange-primary: mat-palette($mat-orange, 800);
+$orange-accent: mat-palette($mat-gray, 800);
+$orange-warn: mat-palette($mat-red, 700);
+
+
+$purple-primary: mat-palette($mat-purple, 800);
+$purple-accent: mat-palette($mat-gray, 800);
+$purple-warn: mat-palette($mat-red, 700);
+
+$brown-primary: mat-palette($mat-brown, 800);
+$brown-accent: mat-palette($mat-gray, 800);
+$brown-warn: mat-palette($mat-red, 700);
+
+$green-primary: mat-palette($mat-green, 800);
+$green-accent: mat-palette($mat-gray, 800);
+$green-warn: mat-palette($mat-red, 700);
+
+.red-dark-theme{
+    $theme: mat-dark-theme($red-primary, $red-accent, $red-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+ }
+
+.red-light-theme{
+    $theme: mat-light-theme($red-primary, $red-accent, $red-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+}
+
+.candy-dark-theme{
+    $theme: mat-dark-theme($candy-primary, $candy-accent, $candy-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+ }
+
+.candy-light-theme{
+    $theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+}
+
+.orange-dark-theme{
+    $theme: mat-dark-theme($orange-primary, $orange-accent, $orange-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+ }
+
+.orange-light-theme{
+    $theme: mat-light-theme($orange-primary, $orange-accent, $orange-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+}
+
+.purple-dark-theme{
+    $theme: mat-dark-theme($purple-primary, $orange-accent, $orange-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+ }
+
+.purple-light-theme{
+    $theme: mat-light-theme($purple-primary, $orange-accent, $orange-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+}
+.brown-dark-theme{
+    $theme: mat-dark-theme($brown-primary, $brown-accent, $brown-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+ }
+
+.brown-light-theme{
+    $theme: mat-light-theme($brown-primary, $brown-accent, $brown-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+}
+.green-dark-theme{
+    $theme: mat-dark-theme($green-primary, $green-accent, $green-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+ }
+
+.green-light-theme{
+    $theme: mat-light-theme($green-primary, $green-accent, $green-warn);
+    @include angular-material-theme($theme);
+    @include component-theme($theme, $custom-success-color);
+    @include sat-datepicker-theme($theme);
+}
+//.red-dark-theme{
+    .logo-image{
+        background-image: url('https://www.thefreelogomakers.com/wp-content/uploads/tflmx1532-400x250.png');
+ 	}
+//}
+// .red-light-theme{
+//     .logo-image{
+//         background-image: url('https://www.thefreelogomakers.com/wp-content/uploads/tflmx1532-400x250.png');
+//     }
+// }
+html {height: 100%;}
+body { 
+    height: 100%; 
+    margin: 0; 
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+    overflow: overlay;
+}
+// .onLoad {
+//     animation: fadeIn 2s !important;
+//     -moz-animation: fadeIn 2s; /* Firefox */
+//     -webkit-animation: fadeIn 2s; /* Safari and Chrome */
+//     -o-animation: fadeIn 2s; /* Opera */
+
+//   }
+//  @keyframes fadeIn {
+//   from {
+//     opacity: 0.5;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+// @-webkit-keyframes fadeIn {
+//     from {
+//         opacity: 0.5;
+//       }
+//       to {
+//         opacity: 1;
+//       }
+// }
+.cdk-global-overlay-wrapper {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  overflow: auto;
+  pointer-events: auto;  
+}
+
+.no-v-scroll {
+    height: 100%;
+    overflow-y: hidden !important; 
+    display: flex !important; 
+    flex-direction: column !important;
+  }
+  
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90);
+    border-radius: 10px;
+   
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }

@@ -1,0 +1,21 @@
+.assign-delivery-boy-container{
+    min-height: 320px;
+    min-width: 500px;
+ 
+    .model-header{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .model-body{
+        display: flex;
+        flex-direction: column;
+        min-height: 250px;
+        max-height: 300px;
+        overflow: auto;
+    }
+    .model-footer{
+        height: 30px;
+        padding: 20px 20px;
+    }
+}

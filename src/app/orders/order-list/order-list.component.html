@@ -1,0 +1,175 @@
+<div class="flex-with-space-between padding">
+    <h3>Orders</h3>
+    <a mat-raised-button color="primary" [routerLink]="['/orders/create']">Create Order Offline</a>
+</div>
+<div class="vertical-height"></div>
+<div class="flex">
+    <div style="display: flex; justify-content: center;">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Search by order number</mat-label>
+                <input matInput placeholder="Enter your location">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-flat-button style="height: 51.5px;" color="primary">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="small-gap"></div>
+    <mat-form-field appearance="fill" style="width: 180px;">
+        <mat-label>Seach by status</mat-label>
+        <mat-select [(ngModel)]="selectedStatus" (selectionChange)="onStatusChange()">
+            <mat-option *ngFor="let status of statusList" [value]="status">
+                {{status}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="small-gap"></div>
+    <mat-form-field appearance="fill" style="width: 180px;">
+        <mat-label>Seach by delivery type</mat-label>
+        <mat-select [(ngModel)]="selectedDeliveryType" (selectionChange)="onDeliveryTypeChange()">
+            <mat-option *ngFor="let type of deliveryType" [value]="type">
+                {{type}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="small-gap"></div>
+    <mat-form-field appearance="fill">
+        <mat-label>Seach by date range</mat-label>
+        <input matInput placeholder="Choose a date" [satDatepicker]="picker" [value]="date"
+            [(ngModel)]="selectedDateRange" (ngModelChange)="onChangeDateRange()">
+        <sat-datepicker #picker [rangeMode]="true"></sat-datepicker>
+        <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+    </mat-form-field>
+    <div class="small-gap"></div>
+    <div>
+        <a mat-button style="height: 51.5px;" color="primary" class="flex-item-center"
+            (click)="defaultFilterSelection()">
+            <mat-icon>refresh</mat-icon>
+            Reset
+        </a>
+    </div>
+</div>
+
+<mat-card style="min-height: 60px;" class="flex-middle">
+    <div class="flex-column-center" *ngFor="let statusCard of statusCards" style="margin-right: 60px;">
+        <div style="color: whitesmoke;" [style.color]="statusCard.color"
+            [style.border-color]="statusCard.color">
+            <h1 style="font-weight: bold;">{{statusCard.no}}</h1>
+        </div>
+        <div class="small-vertical-height"></div>
+        <h3 style="opacity: 0.8;">{{statusCard.status}}</h3>
+    </div>
+</mat-card>
+<div class="vertical-height"></div>
+<table mat-table [dataSource]="dataSource" matSort class="full-width">
+    <ng-container matColumnDef="#">
+        <th mat-header-cell *matHeaderCellDef> # </th>
+        <td mat-cell *matCellDef="let element; let i = index;">
+            {{i+1}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="orderId">
+        <th mat-header-cell *matHeaderCellDef> Order Id </th>
+        <td mat-cell *matCellDef="let element">
+            <div class="flex-item-center">
+                <img src="http://colleges.su.edu.krd/science/wp-content/uploads/2017/06/New.gif" *ngIf="element.status === 'Pending'" width="25" height="25" style="position: absolute; padding-bottom: 35px;transform: scaleX(1.5) rotateZ(22deg);"/>
+                ORD{{element.id}}
+                <div class="very-small-gap"></div>
+                <img matTooltip="Pick Up" class="pointer" *ngIf="element.deliveryType === 'Pick up'"
+                    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/pick-up-1103324.png"
+                    style="width: 30px; height: 30px; background: lightyellow; border-radius: 50%;">
+
+                <mat-icon style="background: lightgreen; border: 1px solid lightgreen; border-radius: 50%; "
+                    color="success" matTooltip="Delivery" *ngIf="element.deliveryType === 'Delivery'">motorcycle
+                </mat-icon>
+
+            </div>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName + ' '+ element.lastName }} </td>
+    </ng-container>
+
+
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="mobileNumber">
+        <th mat-header-cell *matHeaderCellDef> Mobile Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.mobileNumber}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="totalAmount">
+        <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+        <td mat-cell *matCellDef="let element"> {{element.totalAmount| currency: 'INR'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="orderDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header start="desc" matSortActive="name" matSortDirection="desc">
+            Order Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderDate | customDate }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element" style="width: 140px;">
+            <ng-container *ngIf="element.status === 'Pending'">
+                <mat-select [(ngModel)]="element.status" (selectionChange)="changeStatus(element)" style="width: 100px; border-color: green;"
+                    class="border small-padding primary-border">
+                    <mat-option [value]="status" *ngFor="let status of afterPendingStatus">
+                        {{ status }}
+                    </mat-option>
+                </mat-select>
+            </ng-container>
+            <ng-container *ngIf="element.status === 'Accepted'">
+                <mat-select [(ngModel)]="element.status" (selectionChange)="changeStatus(element)" style="width: 100px; "
+                    class="border small-padding">
+                    <mat-option [value]="status" *ngFor="let status of afterAcceptStatus">
+                        {{ status }}
+                    </mat-option>
+                </mat-select>
+            </ng-container>
+            <ng-container *ngIf="element.status === 'On The Way'">
+                <mat-select [(ngModel)]="element.status" (selectionChange)="changeStatus(element)" style="width: 100px;"
+                    class="border small-padding">
+                    <mat-option [value]="status" *ngFor="let status of afterOnTheWayStatus">
+                        {{ status }}
+                    </mat-option>
+                </mat-select>
+            </ng-container>
+            <ng-container *ngIf="element.status === 'Rejected' || element.status === 'Delivered'">
+                {{element.status}}
+            </ng-container>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>
+            Action </th>
+        <td mat-cell *matCellDef="let element">
+            <div class="flex">
+                <a mat-icon-button>
+                    <mat-icon matTooltip="Track">room</mat-icon>
+                </a>
+                <a mat-icon-button
+                    *ngIf="element.status !== 'Delivered' && element.status !== 'Rejected'  && element.status !== 'On The Way' && element.status !== 'Pending' && element.deliveryType !== 'Pick up' "
+                    (click)="assignDeliveryBoyDialog(element)">
+                    <mat-icon matTooltip="Assign Delivery Boy">assignment_ind</mat-icon>
+                </a>
+
+            </div>
+        </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="table-row" 
+        [style.background] = "row.status === 'Pending' ? '#e8f9eb' : 'inherited'"
+    ></tr>
+</table>
+<mat-paginator [pageSizeOptions]=" [10, 15, 20]" showFirstLastButtons>
+        </mat-paginator>

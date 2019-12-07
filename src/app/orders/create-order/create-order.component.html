@@ -1,0 +1,279 @@
+<div class="flex-with-space-between">
+    <div class="flex-item-center">
+        <a mat-icon-button color="primary" aria-label="go to list" [routerLink]="['/orders/list']">
+            <mat-icon fontSet="material-icons-outlined" class="icon">keyboard_backspace</mat-icon>
+        </a>
+        <h2>Create Order</h2>
+    </div>
+    <mat-form-field appearance="fill">
+        <mat-label>Choose Delivery Type</mat-label>
+        <mat-select [(ngModel)]="selectedDeliveryType" (selectionChange)="onDeliveryTypeSelect($event)">
+            <mat-option *ngFor="let type of deliveryTypes" [value]="type">
+                {{type}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="flex">
+
+        <button mat-raised-button color="primary" aria-label="Place order" (click)="createOrder()"
+            [disabled]="orderForm.status !== 'VALID' || orderForm.value.itemList.length === 0">
+            <mat-icon>done</mat-icon> Place Order
+        </button>
+    </div>
+</div>
+<div class="vertical-height"></div>
+<div class="flex">
+    <div class="flex3" style="margin-right: 40px;">
+        <mat-tab-group>
+            <mat-tab label="Add Products">
+                <div class="vertical-height"></div>
+                <h3>Product Info</h3>
+                <div class="vertical-height"></div>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Choose category</mat-label>
+                    <mat-select (selectionChange)="onCategorySelect($event)">
+                        <mat-option *ngFor="let category of categories" [value]="category">
+                            {{category.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+                <div class="vertical-height"></div>
+                <h3>Products</h3>
+                <div class="vertical-height"></div>
+                <form class="example-form">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <input matInput placeholder="Seach Product" aria-label="Search product"
+                            [matAutocomplete]="productSearchAuto" [formControl]="productCtrl"
+                            [(ngModel)]="seachProduct">
+
+                        <mat-icon matSuffix *ngIf="seachProduct" (click)="seachProduct=''">close</mat-icon>
+                        <mat-icon matPrefix>search</mat-icon>
+
+                        <mat-autocomplete #productSearchAuto="matAutocomplete">
+                            <mat-option *ngFor="let product of filteredProducts | async" [value]="product.name">
+                                {{product.name}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+                <div class="item-container" *ngIf="products.length > 0">
+                    <div class="flex-with-space-between" style="margin: 0px 10px 10px 0px; position: relative; 
+                                border: 1px solid lightgray;"
+                        *ngFor="let item of products | productFilter: seachProduct" (click)="addItemDialog(item)"
+                        [ngStyle]="{'border-color':item.quantity > 0 ? 'green' : 'lightgray' }">
+
+                        <div class="item-box flex">
+                            <div style="margin-right: 10px;">
+                                <img [src]="item.imageLink" width="80" height="80">
+                            </div>
+                            <div>
+                                <div class="flex-only" style="margin-bottom: 10px;">
+                                    <img *ngIf="item.type === 'veg'"
+                                        src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/511904b5d7cd6881bc88882d4089e3bb.svg"
+                                        width="12px" height="12px">
+                                    <img *ngIf="item.type === 'nonveg'"
+                                        src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/d049360b6709dd54ea5ff0689849db7a.svg"
+                                        width="12px" height="12px">
+                                    <div style="margin-left: 10px;" class="flex-column">
+                                        <span> {{item.name}} </span>
+                                    </div>
+                                </div>
+                                <label>{{item.sortDescription}}</label>
+                                <div style="margin-top: 15px;">
+                                    <span>₹ {{item.price}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="item.quantity > 0" class="quantity-box">
+                            <span>{{item.quantity}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="products.length > 0 && (products | productFilter: seachProduct).length === 0"
+                    style="height: 120px; border: 1px solid lightgray;" class="flex-middle">
+                    <h3 style="opacity: 0.8;">No search found</h3>
+                </div>
+                <div *ngIf="products.length === 0" style="height: 120px; border: 1px solid lightgray;"
+                    class="flex-middle">
+                    <h3 style="opacity: 0.8;">Please select category</h3>
+                </div>
+
+
+            </mat-tab>
+            <mat-tab label="Fill Customer Info">
+                <div class="vertical-height"></div>
+                <h3>Customer Info</h3>
+
+                <div class="vertical-height"></div>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input type="text" placeholder="Customer" aria-label="Customer" matInput
+                            [formControl]="customerControl" [matAutocomplete]="auto1"
+                            [(ngModel)]="customerSearchBoxValue">
+                        <mat-icon matSuffix *ngIf="customerSearchBoxValue"
+                            (click)="customerSearchBoxValue=''; clearSearchCustomer(); ">close</mat-icon>
+                        <mat-icon matPrefix>search</mat-icon>
+                        <mat-autocomplete #auto1="matAutocomplete" [displayWith]="displayFn"
+                            (optionSelected)='onCustomerSelect($event.option.value)'>
+                            <mat-option *ngFor="let customer of filteredCustomers | async" [value]="customer">
+                                <span>{{customer.firstName}}</span> <span> {{customer.lastName}}</span> <span>
+                                    ({{customer.mobileNumber}})</span>
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+                <div>
+                    <h3>Customer Details *</h3>
+                </div>
+                <div class="vertical-height"></div>
+                <form class="example-form" [formGroup]="orderForm">
+                    <div class="example-full-width flex">
+                        <mat-form-field appearance="outline" class="flex1">
+                            <mat-label>First Name</mat-label>
+                            <input matInput formControlName="firstName" placeholder="First Name" required>
+                        </mat-form-field>
+                        <div class="small-gap"></div>
+                        <mat-form-field appearance="outline" class="flex1">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput formControlName="lastName" placeholder="Last Name" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="example-full-width flex">
+                        <mat-form-field appearance="outline" class="flex1">
+                            <mat-label>Mobile Number</mat-label>
+                            <input matInput formControlName="mobileNumber" placeholder="Mobile Number" required>
+                        </mat-form-field>
+                        <div class="small-gap"></div>
+                        <mat-form-field appearance="outline" class="flex1">
+                            <mat-label>Email Id</mat-label>
+                            <input matInput formControlName="mailId" placeholder="Email Id" required>
+                        </mat-form-field>
+                    </div>
+                </form>
+
+
+                <div class="flex-with-space-between">
+                    <h3> Choose a delivery address *</h3>
+                    <a mat-button color="primary" (click)="openAddressDialog()">Add New Address</a>
+                </div>
+                <div class="vertical-height"></div>
+                <div class="address-box-container" *ngFor="let address of addresses">
+                    <div class="address-box-card full-width" [ngClass]="{'selected-card': address.default}"
+                        (click)="selectAddress(address.id)">
+                        <div class="address-box-header">
+                            <mat-icon fontSet="material-icons-outlined">{{address.icon}}</mat-icon>
+                            <h3 style="font-weight: 500; margin-left: 10px">{{address.title}}</h3>
+                        </div>
+                        <div class="address-box-footer">
+                            <label>{{address.address}}</label>
+                        </div>
+                        <div *ngIf="address.default" class="quantity-box">
+                            <mat-icon>done</mat-icon>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div *ngIf="searchCustomer && addresses.length == 0">
+                    <div class="flex-middle border" style="min-height: 200px;">
+                        <div style="text-align: center;">
+                            <span
+                                style="opacity: 0.5;"><b>{{searchCustomer.firstName + ' ' + searchCustomer.lastName}}</b>
+                                does not have any
+                                saved address</span>
+                            <h3 style="opacity: 0.5; margin-top: 5px;">Please add new address</h3>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="!searchCustomer && addresses.length == 0">
+                    <div class="flex-middle border" style="min-height: 200px;">
+                        <h3 style="opacity: 0.5;">Please add address</h3>
+                    </div>
+                </div>
+
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="small-gap"></div>
+    <div class="flex2">
+        <div class="vertical-height"></div>
+        <div *ngIf="orderForm.status == 'VALID'">
+            <h3>Deliver To</h3>
+
+            <div style="line-height: 1.8; margin-top: 10px;">
+                <span><b>{{orderForm.value.firstName +' '+ orderForm.value.lastName}}</b>
+                    ({{orderForm.value.mobileNumber}}), </span><br>
+                <span>{{orderForm.value.address}}</span>
+            </div>
+        </div>
+        <div class="vertical-height"></div>
+        <div class="main-box cart-card full-width" style="padding: 0;">
+            <h3>Cart (<b>{{cartItems.length}}</b>)</h3>
+
+            <div class="vertical-height"></div>
+            <div class="cart-card-body border" *ngIf="cartItems.length > 0">
+                <ul class="cart-overflow padding">
+                    <li class="flex-with-space-between" style="padding-bottom: 10px;" *ngFor="let item of cartItems">
+                        <div class="flex-item-center">
+                            <mat-form-field style="width: 60px;">
+                                <mat-select style="text-align: center !important;" [(ngModel)]="item.quantity">
+                                    <mat-option *ngFor="let quantityValue of quantityList" [value]="quantityValue"
+                                        style="margin-left: 5px !important;">
+                                        {{quantityValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <div class="small-gap"></div>
+                            <div class="flex-column">
+                                <span style="max-width: 205px;"> {{item.name}} </span>
+                                <a style="margin-top: 5px;" class="success">Edit </a>
+                            </div>
+                        </div>
+                        <div class="flex-item-center">
+                            <h4>₹ {{item.quantity * item.price}}</h4>
+                            <div class="small-gap"></div>
+                            <mat-icon (click)="deleteItemFromCart(item)">delete</mat-icon>
+                        </div>
+
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <div *ngIf="cartItems.length > 0" class="padding">
+                    <div class="flex-column">
+                        <div class="flex-with-space-between">
+                            <span>Subtotal</span>
+                            <h3>{{calculateTotalPriceOfCart() | currency: 'INR'}}</h3>
+                        </div>
+                        <div class="vertical-height"></div>
+                        <div class="flex-with-space-between">
+                            <span>Tax (18%)</span>
+                            <h3>{{(calculateTotalPriceOfCart() * 18 / 100 ) | currency: 'INR'}}</h3>
+                        </div>
+                        <div class="vertical-height"></div>
+                        <div class="flex-with-space-between">
+                            <span>Delivery Fee</span>
+                            <h3 *ngIf="enableDeliveryFee">{{50.0 | currency: 'INR'}}</h3>
+                            <h3 *ngIf="!enableDeliveryFee">{{0 | currency: 'INR'}}</h3>
+                        </div>
+                        <div class="vertical-height"></div>
+                        <div class="flex-with-space-between">
+                            <h2>Total</h2>
+                            <h2>{{orderForm.value.totalAmount | currency: 'INR'}}
+                            </h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="cartItems.length == 0" style="height: 200px;" class="border flex-middle">
+                <h3 style="opacity: 0.5;">Please add products to cart</h3>
+            </div>
+
+        </div>
+    </div>
+
+</div>

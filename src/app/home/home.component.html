@@ -1,0 +1,96 @@
+<div class="home-container">
+    <div class="full-hight card-background padding" style="min-height: 400px;">
+        <div class="small-vertical-height"></div>
+        <div class="flex-middle">
+            <mat-card class="box flex-middle">
+                <div class="flex-column-center">
+                    <span class="number">{{totalCustomers}}</span>
+                    <span class="text">Total Active Users</span>
+                </div>
+            </mat-card>
+            <mat-card class="box flex-middle">
+                <div class="flex-column-center">
+                    <span class="number">{{totalActiveOrders}}</span>
+                    <span class="text">Total Active Orders</span>
+                </div>
+            </mat-card>
+            <mat-card class="box flex-middle">
+                <div class="flex-column-center">
+                    <span class="number">2</span>
+                    <span class="text">Total Active Branches</span>
+                </div>
+            </mat-card>
+            <mat-card class="box flex-middle">
+                <div class="flex-column-center">
+                    <span class="number">{{totalEarning | bigAmountConvertor}}</span>
+                    <span class="text">Total Earning</span>
+                </div>
+            </mat-card>
+            <mat-card class="box flex-middle">
+                <div class="flex-column-center">
+                    <span class="number">3.7/5</span>
+                    <span class="text">Total Rating</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="small-vertical-height"></div>
+        <div class="flex">
+            <div class="flex1">
+                <div class="table-title">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select Date for summary details</mat-label>
+                        <mat-select [(ngModel)]="selectedSummaryDate" (selectionChange)="onSummaryDateChange($event)">
+                            <mat-option *ngFor="let summaryDate of summaryDateList" [value]="summaryDate">
+                                {{summaryDate.title}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <table mat-table [dataSource]="transactions">
+                    <!-- Item Column -->
+                    <ng-container matColumnDef="item">
+                        <th mat-header-cell *matHeaderCellDef> Item </th>
+                        <td mat-cell *matCellDef="let transaction"> {{transaction.item}} </td>
+                        <!-- <td mat-footer-cell *matFooterCellDef> Total </td> -->
+                    </ng-container>
+
+                    <!-- Cost Column -->
+                    <ng-container matColumnDef="cost">
+                        <th mat-header-cell *matHeaderCellDef> Cost </th>
+                        <td mat-cell *matCellDef="let transaction">
+                            {{ transaction.item !== 'Sells'? transaction.cost : (transaction.cost | currency: 'INR')}}
+                        </td>
+                        <!-- <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td> -->
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    <!-- <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr> -->
+                </table>
+            </div>
+            <div class="small-gap"></div>
+            <div class="vertical-line"></div>
+            <div class="small-gap"></div>
+            <div class="flex1">
+                <div class="flex">
+                    
+                    <mat-form-field appearance="fill">
+                        <mat-label>Choose KPI</mat-label>
+                        <mat-select [(ngModel)]="selectedKpi">
+                            <mat-option *ngFor="let kpi of kpiList" [value]="kpi">
+                                {{kpi}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <app-revenue-chart *ngIf="selectedKpi === 'Sales Trend'"></app-revenue-chart>
+                <app-visitor-chart *ngIf="selectedKpi === 'Visitor Trend'"></app-visitor-chart>
+                <app-cart-abandonment-chart *ngIf="selectedKpi === 'Cart Abandonment Rate'"></app-cart-abandonment-chart>
+                <app-conversion-rate-chart *ngIf="selectedKpi === 'Conversion Rate'"></app-conversion-rate-chart>
+                <app-aov-chart *ngIf="selectedKpi === 'Average Order Value'"></app-aov-chart>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>

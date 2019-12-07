@@ -1,0 +1,53 @@
+<div class="no-v-scroll">
+    <button mat-icon-button class="flex-middle full-width" style="height: 64px;">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div class="side-menu" style="height: 800px;">
+        <div class="flex-column">
+            <a mat-button style="height: 80px;" [routerLink]="['/dashboard']" routerLinkActive="active">
+                <div class="flex-middle full-height" style="flex-direction: column;">
+                    <mat-icon>dashboard</mat-icon>
+                    <span style="font-size: 12px;">Dashboard</span>
+                </div>
+            </a>
+            <a mat-button style="height: 80px;" [routerLink]="['/orders']" routerLinkActive="active">
+                <div class="flex-middle full-height" style="flex-direction: column;">
+                    <mat-icon>shopping_cart</mat-icon>
+                    <span style="font-size: 12px;">Orders</span>
+                </div>
+            </a>
+            <a mat-button style="height: 80px;" [routerLink]="['/users']" routerLinkActive="active">
+                <div class="flex-middle full-height" style="flex-direction: column;">
+                    <mat-icon>people</mat-icon>
+                    <span style="font-size: 12px;">Users</span>
+                </div>
+            </a>
+            <a mat-button style="height: 80px;" [routerLink]="['/menu-setup']" routerLinkActive="active">
+                <div class="flex-middle full-height" style="flex-direction: column;">
+                    <mat-icon>restaurant_menu</mat-icon>
+                    <span style="font-size: 12px;">Menu Setup</span>
+                </div>
+            </a>
+            <a mat-button style="height: 80px;" [routerLink]="['/delivery-boy']" routerLinkActive="active">
+                <div class="flex-middle full-height" style="flex-direction: column;">
+                    <mat-icon>motorcycle</mat-icon>
+                    <span style="font-size: 12px;">Delivery boy</span>
+                </div>
+            </a>
+
+
+            <a mat-button style="height: 80px;" [routerLink]="['/reports']" routerLinkActive="active">
+                <div class="flex-middle full-height" style="flex-direction: column;">
+                    <mat-icon>bar_chart</mat-icon>
+                    <span style="font-size: 12px;">Reports</span>
+                </div>
+            </a>
+            <a mat-button style="height: 80px;">
+                <div class="flex-middle full-height" style="flex-direction: column;">
+                    <mat-icon>settings</mat-icon>
+                    <span style="font-size: 12px;">Settings</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
